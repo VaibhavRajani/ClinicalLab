@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F2A86952B796D7C00E36126 /* ClinicalLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86942B796D7C00E36126 /* ClinicalLabApp.swift */; };
+		2F2A86992B796D7D00E36126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2A86982B796D7D00E36126 /* Assets.xcassets */; };
+		2F2A869C2B796D7D00E36126 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2A869B2B796D7D00E36126 /* Preview Assets.xcassets */; };
+		2F2A86A62B796D7E00E36126 /* ClinicalLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86A52B796D7E00E36126 /* ClinicalLabTests.swift */; };
+		2F2A86B02B796D7E00E36126 /* ClinicalLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86AF2B796D7E00E36126 /* ClinicalLabUITests.swift */; };
+		2F2A86B22B796D7E00E36126 /* ClinicalLabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86B12B796D7E00E36126 /* ClinicalLabUITestsLaunchTests.swift */; };
+		2F2A86BF2B79FF2700E36126 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86BE2B79FF2700E36126 /* User.swift */; };
+		2F2A86C12B79FF3C00E36126 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86C02B79FF3C00E36126 /* AdminViewModel.swift */; };
+		2F2A86C32B79FF5900E36126 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86C22B79FF5900E36126 /* LoginService.swift */; };
+		2F2A86C52B79FF6D00E36126 /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86C42B79FF6D00E36126 /* AdminLoginView.swift */; };
+		2F2A86CF2B7A0E3A00E36126 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86CE2B7A0E3900E36126 /* HomeScreenView.swift */; };
+		2F2A86D12B7A0E5300E36126 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86D02B7A0E5300E36126 /* HomeViewModel.swift */; };
+		2F2A86D32B7A0E7B00E36126 /* AdminDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86D22B7A0E7B00E36126 /* AdminDetails.swift */; };
+		2F2A86D52B7A0F4000E36126 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86D42B7A0F4000E36126 /* ContentView.swift */; };
+		2F2A86D72B7AD88900E36126 /* AdminLoginViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86D62B7AD88900E36126 /* AdminLoginViewService.swift */; };
+		2F2A86D92B7B230600E36126 /* RouteDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86D82B7B230600E36126 /* RouteDetailService.swift */; };
+		2F2A86DB2B7B244D00E36126 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86DA2B7B244D00E36126 /* Route.swift */; };
+		2F2A86DD2B7B249700E36126 /* DriverDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86DC2B7B249700E36126 /* DriverDetailViewModel.swift */; };
+		2F2A86E12B7B25A600E36126 /* DriverDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A86E02B7B25A600E36126 /* DriverDetailView.swift */; };
+		2F3A687E2B8427B0004E4992 /* AddCustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A687D2B8427B0004E4992 /* AddCustomerView.swift */; };
+		2F3A68802B84645F004E4992 /* UpdateCustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A687F2B84645F004E4992 /* UpdateCustomerView.swift */; };
+		2F3A68822B848906004E4992 /* GetVehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68812B848906004E4992 /* GetVehicleService.swift */; };
+		2F3A68842B8489BE004E4992 /* GetVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68832B8489BE004E4992 /* GetVehicleViewModel.swift */; };
+		2F3A68862B8489DF004E4992 /* VehicleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68852B8489DF004E4992 /* VehicleListView.swift */; };
+		2F3A68882B848D70004E4992 /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68872B848D70004E4992 /* AddVehicleView.swift */; };
+		2F3A688A2B849090004E4992 /* UpdateVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68892B849090004E4992 /* UpdateVehicleView.swift */; };
+		2F7715A82B81504F00DE6DB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715A72B81504F00DE6DB3 /* SettingsView.swift */; };
+		2F7715AA2B8151D100DE6DB3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715A92B8151D100DE6DB3 /* MainTabView.swift */; };
+		2F7715AC2B81564C00DE6DB3 /* DriverListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */; };
+		2F7715AE2B81582100DE6DB3 /* GetDriverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715AD2B81582100DE6DB3 /* GetDriverService.swift */; };
+		2F7715B02B81584200DE6DB3 /* GetDriverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715AF2B81584200DE6DB3 /* GetDriverViewModel.swift */; };
+		2F7715B22B81BB8600DE6DB3 /* UpdateDriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B12B81BB8600DE6DB3 /* UpdateDriverView.swift */; };
+		2F7715B42B82863B00DE6DB3 /* AddDriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B32B82863B00DE6DB3 /* AddDriverView.swift */; };
+		2F7715B62B82FAEA00DE6DB3 /* CustomerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */; };
+		2F7715B82B82FB5000DE6DB3 /* GetCustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */; };
+		2F7715BA2B83066200DE6DB3 /* GetCustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F2A86A22B796D7E00E36126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F2A86892B796D7C00E36126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F2A86902B796D7C00E36126;
+			remoteInfo = ClinicalLab;
+		};
+		2F2A86AC2B796D7E00E36126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F2A86892B796D7C00E36126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F2A86902B796D7C00E36126;
+			remoteInfo = ClinicalLab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F2A86912B796D7C00E36126 /* ClinicalLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClinicalLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F2A86942B796D7C00E36126 /* ClinicalLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicalLabApp.swift; sourceTree = "<group>"; };
+		2F2A86982B796D7D00E36126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F2A869B2B796D7D00E36126 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F2A86A12B796D7E00E36126 /* ClinicalLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClinicalLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F2A86A52B796D7E00E36126 /* ClinicalLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicalLabTests.swift; sourceTree = "<group>"; };
+		2F2A86AB2B796D7E00E36126 /* ClinicalLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClinicalLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F2A86AF2B796D7E00E36126 /* ClinicalLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicalLabUITests.swift; sourceTree = "<group>"; };
+		2F2A86B12B796D7E00E36126 /* ClinicalLabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicalLabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F2A86BE2B79FF2700E36126 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2F2A86C02B79FF3C00E36126 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
+		2F2A86C22B79FF5900E36126 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		2F2A86C42B79FF6D00E36126 /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
+		2F2A86CE2B7A0E3900E36126 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		2F2A86D02B7A0E5300E36126 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2F2A86D22B7A0E7B00E36126 /* AdminDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDetails.swift; sourceTree = "<group>"; };
+		2F2A86D42B7A0F4000E36126 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F2A86D62B7AD88900E36126 /* AdminLoginViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewService.swift; sourceTree = "<group>"; };
+		2F2A86D82B7B230600E36126 /* RouteDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailService.swift; sourceTree = "<group>"; };
+		2F2A86DA2B7B244D00E36126 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		2F2A86DC2B7B249700E36126 /* DriverDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewModel.swift; sourceTree = "<group>"; };
+		2F2A86E02B7B25A600E36126 /* DriverDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailView.swift; sourceTree = "<group>"; };
+		2F3A687D2B8427B0004E4992 /* AddCustomerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerView.swift; sourceTree = "<group>"; };
+		2F3A687F2B84645F004E4992 /* UpdateCustomerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomerView.swift; sourceTree = "<group>"; };
+		2F3A68812B848906004E4992 /* GetVehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVehicleService.swift; sourceTree = "<group>"; };
+		2F3A68832B8489BE004E4992 /* GetVehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVehicleViewModel.swift; sourceTree = "<group>"; };
+		2F3A68852B8489DF004E4992 /* VehicleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListView.swift; sourceTree = "<group>"; };
+		2F3A68872B848D70004E4992 /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
+		2F3A68892B849090004E4992 /* UpdateVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVehicleView.swift; sourceTree = "<group>"; };
+		2F7715A72B81504F00DE6DB3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2F7715A92B8151D100DE6DB3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListView.swift; sourceTree = "<group>"; };
+		2F7715AD2B81582100DE6DB3 /* GetDriverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDriverService.swift; sourceTree = "<group>"; };
+		2F7715AF2B81584200DE6DB3 /* GetDriverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDriverViewModel.swift; sourceTree = "<group>"; };
+		2F7715B12B81BB8600DE6DB3 /* UpdateDriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDriverView.swift; sourceTree = "<group>"; };
+		2F7715B32B82863B00DE6DB3 /* AddDriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDriverView.swift; sourceTree = "<group>"; };
+		2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListView.swift; sourceTree = "<group>"; };
+		2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerService.swift; sourceTree = "<group>"; };
+		2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F2A868E2B796D7C00E36126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F2A869E2B796D7E00E36126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F2A86A82B796D7E00E36126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F2A86882B796D7C00E36126 = {
+			isa = PBXGroup;
+			children = (
+				2F2A86932B796D7C00E36126 /* ClinicalLab */,
+				2F2A86A42B796D7E00E36126 /* ClinicalLabTests */,
+				2F2A86AE2B796D7E00E36126 /* ClinicalLabUITests */,
+				2F2A86922B796D7C00E36126 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F2A86922B796D7C00E36126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86912B796D7C00E36126 /* ClinicalLab.app */,
+				2F2A86A12B796D7E00E36126 /* ClinicalLabTests.xctest */,
+				2F2A86AB2B796D7E00E36126 /* ClinicalLabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F2A86932B796D7C00E36126 /* ClinicalLab */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86CB2B7A0A3E00E36126 /* Service */,
+				2F2A86CA2B7A0A3500E36126 /* ViewModel */,
+				2F2A86C92B7A0A3000E36126 /* View */,
+				2F2A86C82B7A0A2A00E36126 /* Model */,
+				2F2A86942B796D7C00E36126 /* ClinicalLabApp.swift */,
+				2F2A86982B796D7D00E36126 /* Assets.xcassets */,
+				2F2A869A2B796D7D00E36126 /* Preview Content */,
+			);
+			path = ClinicalLab;
+			sourceTree = "<group>";
+		};
+		2F2A869A2B796D7D00E36126 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A869B2B796D7D00E36126 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2F2A86A42B796D7E00E36126 /* ClinicalLabTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86A52B796D7E00E36126 /* ClinicalLabTests.swift */,
+			);
+			path = ClinicalLabTests;
+			sourceTree = "<group>";
+		};
+		2F2A86AE2B796D7E00E36126 /* ClinicalLabUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86AF2B796D7E00E36126 /* ClinicalLabUITests.swift */,
+				2F2A86B12B796D7E00E36126 /* ClinicalLabUITestsLaunchTests.swift */,
+			);
+			path = ClinicalLabUITests;
+			sourceTree = "<group>";
+		};
+		2F2A86C82B7A0A2A00E36126 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86BE2B79FF2700E36126 /* User.swift */,
+				2F2A86D22B7A0E7B00E36126 /* AdminDetails.swift */,
+				2F2A86DA2B7B244D00E36126 /* Route.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F2A86C92B7A0A3000E36126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86C42B79FF6D00E36126 /* AdminLoginView.swift */,
+				2F7715B32B82863B00DE6DB3 /* AddDriverView.swift */,
+				2F2A86CE2B7A0E3900E36126 /* HomeScreenView.swift */,
+				2F2A86D42B7A0F4000E36126 /* ContentView.swift */,
+				2F3A68852B8489DF004E4992 /* VehicleListView.swift */,
+				2F2A86E02B7B25A600E36126 /* DriverDetailView.swift */,
+				2F3A68872B848D70004E4992 /* AddVehicleView.swift */,
+				2F7715A72B81504F00DE6DB3 /* SettingsView.swift */,
+				2F3A687F2B84645F004E4992 /* UpdateCustomerView.swift */,
+				2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */,
+				2F3A687D2B8427B0004E4992 /* AddCustomerView.swift */,
+				2F3A68892B849090004E4992 /* UpdateVehicleView.swift */,
+				2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */,
+				2F7715B12B81BB8600DE6DB3 /* UpdateDriverView.swift */,
+				2F7715A92B8151D100DE6DB3 /* MainTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F2A86CA2B7A0A3500E36126 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86C02B79FF3C00E36126 /* AdminViewModel.swift */,
+				2F2A86D02B7A0E5300E36126 /* HomeViewModel.swift */,
+				2F2A86DC2B7B249700E36126 /* DriverDetailViewModel.swift */,
+				2F3A68832B8489BE004E4992 /* GetVehicleViewModel.swift */,
+				2F7715AF2B81584200DE6DB3 /* GetDriverViewModel.swift */,
+				2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F2A86CB2B7A0A3E00E36126 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A86C22B79FF5900E36126 /* LoginService.swift */,
+				2F2A86D62B7AD88900E36126 /* AdminLoginViewService.swift */,
+				2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */,
+				2F3A68812B848906004E4992 /* GetVehicleService.swift */,
+				2F2A86D82B7B230600E36126 /* RouteDetailService.swift */,
+				2F7715AD2B81582100DE6DB3 /* GetDriverService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F2A86902B796D7C00E36126 /* ClinicalLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F2A86B52B796D7E00E36126 /* Build configuration list for PBXNativeTarget "ClinicalLab" */;
+			buildPhases = (
+				2F2A868D2B796D7C00E36126 /* Sources */,
+				2F2A868E2B796D7C00E36126 /* Frameworks */,
+				2F2A868F2B796D7C00E36126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClinicalLab;
+			productName = ClinicalLab;
+			productReference = 2F2A86912B796D7C00E36126 /* ClinicalLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F2A86A02B796D7E00E36126 /* ClinicalLabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F2A86B82B796D7E00E36126 /* Build configuration list for PBXNativeTarget "ClinicalLabTests" */;
+			buildPhases = (
+				2F2A869D2B796D7E00E36126 /* Sources */,
+				2F2A869E2B796D7E00E36126 /* Frameworks */,
+				2F2A869F2B796D7E00E36126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F2A86A32B796D7E00E36126 /* PBXTargetDependency */,
+			);
+			name = ClinicalLabTests;
+			productName = ClinicalLabTests;
+			productReference = 2F2A86A12B796D7E00E36126 /* ClinicalLabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F2A86AA2B796D7E00E36126 /* ClinicalLabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F2A86BB2B796D7E00E36126 /* Build configuration list for PBXNativeTarget "ClinicalLabUITests" */;
+			buildPhases = (
+				2F2A86A72B796D7E00E36126 /* Sources */,
+				2F2A86A82B796D7E00E36126 /* Frameworks */,
+				2F2A86A92B796D7E00E36126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F2A86AD2B796D7E00E36126 /* PBXTargetDependency */,
+			);
+			name = ClinicalLabUITests;
+			productName = ClinicalLabUITests;
+			productReference = 2F2A86AB2B796D7E00E36126 /* ClinicalLabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F2A86892B796D7C00E36126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2F2A86902B796D7C00E36126 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					2F2A86A02B796D7E00E36126 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2F2A86902B796D7C00E36126;
+					};
+					2F2A86AA2B796D7E00E36126 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2F2A86902B796D7C00E36126;
+					};
+				};
+			};
+			buildConfigurationList = 2F2A868C2B796D7C00E36126 /* Build configuration list for PBXProject "ClinicalLab" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F2A86882B796D7C00E36126;
+			productRefGroup = 2F2A86922B796D7C00E36126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F2A86902B796D7C00E36126 /* ClinicalLab */,
+				2F2A86A02B796D7E00E36126 /* ClinicalLabTests */,
+				2F2A86AA2B796D7E00E36126 /* ClinicalLabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F2A868F2B796D7C00E36126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F2A869C2B796D7D00E36126 /* Preview Assets.xcassets in Resources */,
+				2F2A86992B796D7D00E36126 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F2A869F2B796D7E00E36126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F2A86A92B796D7E00E36126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F2A868D2B796D7C00E36126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3A687E2B8427B0004E4992 /* AddCustomerView.swift in Sources */,
+				2F7715A82B81504F00DE6DB3 /* SettingsView.swift in Sources */,
+				2F2A86D32B7A0E7B00E36126 /* AdminDetails.swift in Sources */,
+				2F2A86C52B79FF6D00E36126 /* AdminLoginView.swift in Sources */,
+				2F7715BA2B83066200DE6DB3 /* GetCustomerViewModel.swift in Sources */,
+				2F7715AA2B8151D100DE6DB3 /* MainTabView.swift in Sources */,
+				2F2A86C12B79FF3C00E36126 /* AdminViewModel.swift in Sources */,
+				2F2A86D12B7A0E5300E36126 /* HomeViewModel.swift in Sources */,
+				2F2A86E12B7B25A600E36126 /* DriverDetailView.swift in Sources */,
+				2F3A68802B84645F004E4992 /* UpdateCustomerView.swift in Sources */,
+				2F2A86C32B79FF5900E36126 /* LoginService.swift in Sources */,
+				2F7715B62B82FAEA00DE6DB3 /* CustomerListView.swift in Sources */,
+				2F2A86DD2B7B249700E36126 /* DriverDetailViewModel.swift in Sources */,
+				2F2A86D72B7AD88900E36126 /* AdminLoginViewService.swift in Sources */,
+				2F2A86D52B7A0F4000E36126 /* ContentView.swift in Sources */,
+				2F7715B22B81BB8600DE6DB3 /* UpdateDriverView.swift in Sources */,
+				2F3A68822B848906004E4992 /* GetVehicleService.swift in Sources */,
+				2F3A68882B848D70004E4992 /* AddVehicleView.swift in Sources */,
+				2F2A86952B796D7C00E36126 /* ClinicalLabApp.swift in Sources */,
+				2F3A68862B8489DF004E4992 /* VehicleListView.swift in Sources */,
+				2F2A86CF2B7A0E3A00E36126 /* HomeScreenView.swift in Sources */,
+				2F2A86DB2B7B244D00E36126 /* Route.swift in Sources */,
+				2F7715AE2B81582100DE6DB3 /* GetDriverService.swift in Sources */,
+				2F7715B82B82FB5000DE6DB3 /* GetCustomerService.swift in Sources */,
+				2F2A86BF2B79FF2700E36126 /* User.swift in Sources */,
+				2F7715AC2B81564C00DE6DB3 /* DriverListView.swift in Sources */,
+				2F3A688A2B849090004E4992 /* UpdateVehicleView.swift in Sources */,
+				2F3A68842B8489BE004E4992 /* GetVehicleViewModel.swift in Sources */,
+				2F7715B42B82863B00DE6DB3 /* AddDriverView.swift in Sources */,
+				2F7715B02B81584200DE6DB3 /* GetDriverViewModel.swift in Sources */,
+				2F2A86D92B7B230600E36126 /* RouteDetailService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F2A869D2B796D7E00E36126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F2A86A62B796D7E00E36126 /* ClinicalLabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F2A86A72B796D7E00E36126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F2A86B02B796D7E00E36126 /* ClinicalLabUITests.swift in Sources */,
+				2F2A86B22B796D7E00E36126 /* ClinicalLabUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F2A86A32B796D7E00E36126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F2A86902B796D7C00E36126 /* ClinicalLab */;
+			targetProxy = 2F2A86A22B796D7E00E36126 /* PBXContainerItemProxy */;
+		};
+		2F2A86AD2B796D7E00E36126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F2A86902B796D7C00E36126 /* ClinicalLab */;
+			targetProxy = 2F2A86AC2B796D7E00E36126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F2A86B32B796D7E00E36126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F2A86B42B796D7E00E36126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F2A86B62B796D7E00E36126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClinicalLab/Preview Content\"";
+				DEVELOPMENT_TEAM = 8LX2UKX6SY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = varajani.ClinicalLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F2A86B72B796D7E00E36126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClinicalLab/Preview Content\"";
+				DEVELOPMENT_TEAM = 8LX2UKX6SY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = varajani.ClinicalLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F2A86B92B796D7E00E36126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LX2UKX6SY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = varajani.ClinicalLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClinicalLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClinicalLab";
+			};
+			name = Debug;
+		};
+		2F2A86BA2B796D7E00E36126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LX2UKX6SY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = varajani.ClinicalLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClinicalLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClinicalLab";
+			};
+			name = Release;
+		};
+		2F2A86BC2B796D7E00E36126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LX2UKX6SY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = varajani.ClinicalLabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClinicalLab;
+			};
+			name = Debug;
+		};
+		2F2A86BD2B796D7E00E36126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LX2UKX6SY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = varajani.ClinicalLabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClinicalLab;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F2A868C2B796D7C00E36126 /* Build configuration list for PBXProject "ClinicalLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F2A86B32B796D7E00E36126 /* Debug */,
+				2F2A86B42B796D7E00E36126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F2A86B52B796D7E00E36126 /* Build configuration list for PBXNativeTarget "ClinicalLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F2A86B62B796D7E00E36126 /* Debug */,
+				2F2A86B72B796D7E00E36126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F2A86B82B796D7E00E36126 /* Build configuration list for PBXNativeTarget "ClinicalLabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F2A86B92B796D7E00E36126 /* Debug */,
+				2F2A86BA2B796D7E00E36126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F2A86BB2B796D7E00E36126 /* Build configuration list for PBXNativeTarget "ClinicalLabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F2A86BC2B796D7E00E36126 /* Debug */,
+				2F2A86BD2B796D7E00E36126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F2A86892B796D7C00E36126 /* Project object */;
+}
