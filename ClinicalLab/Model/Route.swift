@@ -33,7 +33,8 @@ struct Route: Codable {
     }
 }
 
-struct Customer: Codable {
+struct Customer: Codable, Identifiable {
+    var id: Int { customerId ?? 0 } 
     let customerId: Int?
     let customerName: String?
     let streetAddress: String?
@@ -62,6 +63,7 @@ struct Customer: Codable {
         case cust_Log = "Cust_Log"
     }
 }
+
 
 struct Cust: Codable {
     let customerId: Int?
