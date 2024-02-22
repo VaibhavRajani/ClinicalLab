@@ -22,24 +22,24 @@ struct DriverDetailView: View {
                     ForEach(routeDetail.customer, id: \.customerId) { customer in
                         HStack {
                             VStack(alignment: .leading, spacing: 5) {
-                                Text(customer.customerName).bold()
-                                Text("\(customer.streetAddress), \(customer.city), \(customer.state) \(customer.zip)")
+                                Text(customer.customerName ?? "").bold()
+                                Text("\(customer.streetAddress ?? ""), \(customer.city ?? ""), \(customer.state ?? "") \(customer.zip ?? "")")
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
                             
                             VStack(alignment: .leading, spacing: 5) {
-                                Text("\(customer.specimensCollected)")
-                                Text(customer.pickUpTime)
+                                Text("\(customer.specimensCollected ?? 0)")
+                                Text(customer.pickUpTime ?? "")
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
                             
                             VStack(alignment: .leading, spacing: 5) {
-                                Text(customer.collectionStatus)
+                                Text(customer.collectionStatus ?? "")
                             }
                             .frame(width: 110)
                             
                             VStack(alignment: .leading, spacing: 5) {
-                                Text("\(customer.customerId)")
+                                Text("\(customer.customerId ?? 0)")
                             }
                             .frame(width: 80)
                         }

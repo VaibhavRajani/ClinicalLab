@@ -20,7 +20,7 @@ struct HomeScreenView: View {
                         .font(.title)
                     Spacer()
                     Button("Log Out") {
-                        // Handle log out
+                        ContentView()
                     }
                     .foregroundColor(.white)
                 }

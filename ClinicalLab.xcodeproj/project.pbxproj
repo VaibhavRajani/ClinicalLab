@@ -43,6 +43,11 @@
 		2F7715B62B82FAEA00DE6DB3 /* CustomerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */; };
 		2F7715B82B82FB5000DE6DB3 /* GetCustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */; };
 		2F7715BA2B83066200DE6DB3 /* GetCustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */; };
+		2FB8B69D2B86921300BA694C /* GetRouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B69C2B86921300BA694C /* GetRouteService.swift */; };
+		2FB8B69F2B8696AB00BA694C /* GetRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B69E2B8696AB00BA694C /* GetRouteViewModel.swift */; };
+		2FB8B6A12B86976100BA694C /* RouteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B6A02B86976100BA694C /* RouteListView.swift */; };
+		2FB8B6A32B86AF8300BA694C /* AddRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B6A22B86AF8300BA694C /* AddRouteView.swift */; };
+		2FB8B6A52B86C76F00BA694C /* UpdateRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B6A42B86C76F00BA694C /* UpdateRouteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +107,11 @@
 		2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListView.swift; sourceTree = "<group>"; };
 		2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerService.swift; sourceTree = "<group>"; };
 		2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerViewModel.swift; sourceTree = "<group>"; };
+		2FB8B69C2B86921300BA694C /* GetRouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRouteService.swift; sourceTree = "<group>"; };
+		2FB8B69E2B8696AB00BA694C /* GetRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRouteViewModel.swift; sourceTree = "<group>"; };
+		2FB8B6A02B86976100BA694C /* RouteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListView.swift; sourceTree = "<group>"; };
+		2FB8B6A22B86AF8300BA694C /* AddRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRouteView.swift; sourceTree = "<group>"; };
+		2FB8B6A42B86C76F00BA694C /* UpdateRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRouteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +215,9 @@
 				2F7715B32B82863B00DE6DB3 /* AddDriverView.swift */,
 				2F2A86CE2B7A0E3900E36126 /* HomeScreenView.swift */,
 				2F2A86D42B7A0F4000E36126 /* ContentView.swift */,
+				2FB8B6A02B86976100BA694C /* RouteListView.swift */,
 				2F3A68852B8489DF004E4992 /* VehicleListView.swift */,
+				2FB8B6A22B86AF8300BA694C /* AddRouteView.swift */,
 				2F2A86E02B7B25A600E36126 /* DriverDetailView.swift */,
 				2F3A68872B848D70004E4992 /* AddVehicleView.swift */,
 				2F7715A72B81504F00DE6DB3 /* SettingsView.swift */,
@@ -213,6 +225,7 @@
 				2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */,
 				2F3A687D2B8427B0004E4992 /* AddCustomerView.swift */,
 				2F3A68892B849090004E4992 /* UpdateVehicleView.swift */,
+				2FB8B6A42B86C76F00BA694C /* UpdateRouteView.swift */,
 				2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */,
 				2F7715B12B81BB8600DE6DB3 /* UpdateDriverView.swift */,
 				2F7715A92B8151D100DE6DB3 /* MainTabView.swift */,
@@ -226,6 +239,7 @@
 				2F2A86C02B79FF3C00E36126 /* AdminViewModel.swift */,
 				2F2A86D02B7A0E5300E36126 /* HomeViewModel.swift */,
 				2F2A86DC2B7B249700E36126 /* DriverDetailViewModel.swift */,
+				2FB8B69E2B8696AB00BA694C /* GetRouteViewModel.swift */,
 				2F3A68832B8489BE004E4992 /* GetVehicleViewModel.swift */,
 				2F7715AF2B81584200DE6DB3 /* GetDriverViewModel.swift */,
 				2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */,
@@ -241,6 +255,7 @@
 				2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */,
 				2F3A68812B848906004E4992 /* GetVehicleService.swift */,
 				2F2A86D82B7B230600E36126 /* RouteDetailService.swift */,
+				2FB8B69C2B86921300BA694C /* GetRouteService.swift */,
 				2F7715AD2B81582100DE6DB3 /* GetDriverService.swift */,
 			);
 			path = Service;
@@ -392,6 +407,7 @@
 				2F2A86D72B7AD88900E36126 /* AdminLoginViewService.swift in Sources */,
 				2F2A86D52B7A0F4000E36126 /* ContentView.swift in Sources */,
 				2F7715B22B81BB8600DE6DB3 /* UpdateDriverView.swift in Sources */,
+				2FB8B69D2B86921300BA694C /* GetRouteService.swift in Sources */,
 				2F3A68822B848906004E4992 /* GetVehicleService.swift in Sources */,
 				2F3A68882B848D70004E4992 /* AddVehicleView.swift in Sources */,
 				2F2A86952B796D7C00E36126 /* ClinicalLabApp.swift in Sources */,
@@ -401,11 +417,15 @@
 				2F7715AE2B81582100DE6DB3 /* GetDriverService.swift in Sources */,
 				2F7715B82B82FB5000DE6DB3 /* GetCustomerService.swift in Sources */,
 				2F2A86BF2B79FF2700E36126 /* User.swift in Sources */,
+				2FB8B6A12B86976100BA694C /* RouteListView.swift in Sources */,
 				2F7715AC2B81564C00DE6DB3 /* DriverListView.swift in Sources */,
 				2F3A688A2B849090004E4992 /* UpdateVehicleView.swift in Sources */,
+				2FB8B6A52B86C76F00BA694C /* UpdateRouteView.swift in Sources */,
 				2F3A68842B8489BE004E4992 /* GetVehicleViewModel.swift in Sources */,
 				2F7715B42B82863B00DE6DB3 /* AddDriverView.swift in Sources */,
+				2FB8B69F2B8696AB00BA694C /* GetRouteViewModel.swift in Sources */,
 				2F7715B02B81584200DE6DB3 /* GetDriverViewModel.swift in Sources */,
+				2FB8B6A32B86AF8300BA694C /* AddRouteView.swift in Sources */,
 				2F2A86D92B7B230600E36126 /* RouteDetailService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

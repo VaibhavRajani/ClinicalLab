@@ -15,7 +15,7 @@ struct SettingsView: View {
                 NavigationLink("Driver", destination: DriverListView())
                 NavigationLink("Customer", destination: CustomerListView())
                 NavigationLink("Vehicle", destination: VehicleListView())
-                NavigationLink("Routes", destination: Text("Routes Settings"))
+                NavigationLink("Routes", destination: RouteListView())
             }
             .navigationTitle("Settings")
             .listStyle(GroupedListStyle())

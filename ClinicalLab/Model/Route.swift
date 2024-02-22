@@ -16,9 +16,9 @@ struct RouteDetailResponse: Codable {
     }}
 
 struct Route: Codable {
-    var routeNo: Int
-    var routeName: String
-    var driverId: Int
+    var routeNo: Int?
+    var routeName: String?
+    var driverId: Int?
     var driverName: String?
     var vehicleNo: String?
     var vehicleId: Int?
@@ -34,18 +34,18 @@ struct Route: Codable {
 }
 
 struct Customer: Codable {
-    let customerId: Int
-    let customerName: String
-    let streetAddress: String
-    var city: String
-    let state: String
-    let zip: String
-    let specimensCollected: Int
-    let pickUpTime: String
-    let collectionStatus: String
-    let isSelected: Bool
-    let cust_Lat: Double
-    let cust_Log: Double
+    let customerId: Int?
+    let customerName: String?
+    let streetAddress: String?
+    var city: String?
+    let state: String?
+    let zip: String?
+    let pickUpTime: String?
+    let specimensCollected: Int?
+    let collectionStatus: String?
+    let isSelected: Bool?
+    let cust_Lat: Double?
+    let cust_Log: Double?
     
     enum CodingKeys: String, CodingKey {
         case customerId = "CustomerId"
@@ -54,8 +54,8 @@ struct Customer: Codable {
         case city = "City"
         case state = "State"
         case zip = "Zip"
-        case specimensCollected = "SpecimensCollected"
         case pickUpTime = "PickUpTime"
+        case specimensCollected = "SpecimensCollected"
         case collectionStatus = "CollectionStatus"
         case isSelected = "IsSelected"
         case cust_Lat = "Cust_Lat"
