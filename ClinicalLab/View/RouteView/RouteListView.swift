@@ -27,10 +27,7 @@ struct RouteListView: View {
                                 Text("N/A")
                             }
                         }
-                        
-                        
                         Spacer()
-                        
                         VStack(alignment: .center) {
                             Text("Route Name").bold()
                             Text(routeDetail.route.routeName ?? "")
@@ -72,16 +69,27 @@ struct RouteListView: View {
                     for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .navigationBarTitleDisplayMode(.inline)
-
+                
             }
             .navigationBarItems(trailing: Button(action: {
                 showingAddRouteView = true
             }) {
                 Image(systemName: "plus")
             })
-            .sheet(isPresented: $showingUpdatePopup) {
+        
+            if showingUpdatePopup {
+                Color.black.opacity(0.4)
+                    .edgesIgnoringSafeArea(.all)
+                    .onTapGesture {
+                        showingUpdatePopup = false
+                    }
+                
                 if let selectedRouteDetail = selectedRouteDetail {
                     UpdateRouteView(isPresented: $showingUpdatePopup, viewModel: viewModel, routeDetail: selectedRouteDetail)
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .shadow(radius: 10)
+                        .transition(.scale)
                 }
             }
             if showingAddRouteView{

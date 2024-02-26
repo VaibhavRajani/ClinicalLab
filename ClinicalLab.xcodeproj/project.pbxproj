@@ -211,23 +211,15 @@
 		2F2A86C92B7A0A3000E36126 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2FB8B6A72B88141700BA694C /* VehicleView */,
+				2FB8B6A62B8813F500BA694C /* DriverView */,
+				2FB8B6A82B88142600BA694C /* CustomerView */,
+				2FB8B6A92B88144500BA694C /* RouteView */,
 				2F2A86C42B79FF6D00E36126 /* AdminLoginView.swift */,
-				2F7715B32B82863B00DE6DB3 /* AddDriverView.swift */,
 				2F2A86CE2B7A0E3900E36126 /* HomeScreenView.swift */,
 				2F2A86D42B7A0F4000E36126 /* ContentView.swift */,
-				2FB8B6A02B86976100BA694C /* RouteListView.swift */,
-				2F3A68852B8489DF004E4992 /* VehicleListView.swift */,
-				2FB8B6A22B86AF8300BA694C /* AddRouteView.swift */,
 				2F2A86E02B7B25A600E36126 /* DriverDetailView.swift */,
-				2F3A68872B848D70004E4992 /* AddVehicleView.swift */,
 				2F7715A72B81504F00DE6DB3 /* SettingsView.swift */,
-				2F3A687F2B84645F004E4992 /* UpdateCustomerView.swift */,
-				2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */,
-				2F3A687D2B8427B0004E4992 /* AddCustomerView.swift */,
-				2F3A68892B849090004E4992 /* UpdateVehicleView.swift */,
-				2FB8B6A42B86C76F00BA694C /* UpdateRouteView.swift */,
-				2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */,
-				2F7715B12B81BB8600DE6DB3 /* UpdateDriverView.swift */,
 				2F7715A92B8151D100DE6DB3 /* MainTabView.swift */,
 			);
 			path = View;
@@ -259,6 +251,46 @@
 				2F7715AD2B81582100DE6DB3 /* GetDriverService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2FB8B6A62B8813F500BA694C /* DriverView */ = {
+			isa = PBXGroup;
+			children = (
+				2F7715B32B82863B00DE6DB3 /* AddDriverView.swift */,
+				2F7715B12B81BB8600DE6DB3 /* UpdateDriverView.swift */,
+				2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */,
+			);
+			path = DriverView;
+			sourceTree = "<group>";
+		};
+		2FB8B6A72B88141700BA694C /* VehicleView */ = {
+			isa = PBXGroup;
+			children = (
+				2F3A68872B848D70004E4992 /* AddVehicleView.swift */,
+				2F3A68852B8489DF004E4992 /* VehicleListView.swift */,
+				2F3A68892B849090004E4992 /* UpdateVehicleView.swift */,
+			);
+			path = VehicleView;
+			sourceTree = "<group>";
+		};
+		2FB8B6A82B88142600BA694C /* CustomerView */ = {
+			isa = PBXGroup;
+			children = (
+				2F3A687F2B84645F004E4992 /* UpdateCustomerView.swift */,
+				2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */,
+				2F3A687D2B8427B0004E4992 /* AddCustomerView.swift */,
+			);
+			path = CustomerView;
+			sourceTree = "<group>";
+		};
+		2FB8B6A92B88144500BA694C /* RouteView */ = {
+			isa = PBXGroup;
+			children = (
+				2FB8B6A22B86AF8300BA694C /* AddRouteView.swift */,
+				2FB8B6A02B86976100BA694C /* RouteListView.swift */,
+				2FB8B6A42B86C76F00BA694C /* UpdateRouteView.swift */,
+			);
+			path = RouteView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

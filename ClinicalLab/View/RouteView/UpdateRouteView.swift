@@ -17,13 +17,13 @@ struct UpdateRouteView: View {
     @State private var newDriverId: String = ""
     @State private var newCustomerIDs: String = ""
     @State private var additionalCustomerIDs: [String] = []
-
+    
     let buttonBackgroundColor = Color.customPink
     let buttonTextColor = Color.white
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Add Route")
+            Text("Update Route")
                 .font(.title)
                 .foregroundColor(.customPink)
             
@@ -44,15 +44,38 @@ struct UpdateRouteView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .multilineTextAlignment(.center)
             }
-            
-            ForEach(routeDetail.customer) { customer in
-                HStack {
-                    Text(customer.customerName ?? "Unknown")
-                    Spacer()
-                    Text(customer.streetAddress ?? "")
+            List{
+                ForEach(routeDetail.customer) { customer in
+                    HStack {
+                        Text(customer.customerName ?? "Unknown")
+                        Spacer()
+                        Text(customer.streetAddress ?? "")
+                    }
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            
+                            if let driverIdInt = Int(newDriverId) {
+                                // Combine the existing customer IDs with additional ones
+                                let updatedCustomerIds = viewModel.removeCustomer(from: routeDetail, customerId: customer.customerId ?? 0)
+                                
+                                viewModel.updateRoute(routeDetail: routeDetail, newRouteName: newRouteName, newVehicleNo: newVehicleNo, newDriverId: driverIdInt, newCustomerIDs: updatedCustomerIds) { success in
+                                    if success {
+                                        print("Route updated successfully")
+                                    } else {
+                                        print("Failed to update route")
+                                    }
+                                    isPresented = false
+                                }
+                            }
+                            
+                        } label: {
+                            Label("Delete", systemImage: "trash.fill")
+                        }
+                    }
                 }
             }
-
+            
+            
             HStack {
                 TextField("New Customer ID", text: $newCustomerIDs)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -65,7 +88,7 @@ struct UpdateRouteView: View {
                         .frame(width: 20, height: 20)
                 }
             }
-
+            
             // Show new customer IDs to be added
             ForEach(additionalCustomerIDs, id: \.self) { id in
                 Text("New ID: \(id)")
@@ -93,16 +116,16 @@ struct UpdateRouteView: View {
                         print("Driver ID is not valid.")
                     }
                 }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
-
+                
             }
         }
         .padding()
-        .frame(width: 700, height: 700)
+        .frame(width: 700, height: 500)
         .background(Color.white)
         .cornerRadius(12)
         .shadow(radius: 10)
     }
     private func resetFields() {
-
+        
     }
 }
