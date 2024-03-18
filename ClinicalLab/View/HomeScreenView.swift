@@ -53,10 +53,8 @@ struct HomeScreenView: View {
                                         
                                         VStack{
                                             Text("Picked-up at")
-                                            Spacer()
                                             Text(detail.pickUp_Dt.formattedTime())
                                                 .bold()
-                                            Spacer()
                                         }
                                         VStack{
                                             Text("Picked-up by")
@@ -69,14 +67,13 @@ struct HomeScreenView: View {
                                                 .bold()
                                             
                                         }
+                                        VStack{
+                                            Text(detail.status == 0 ? "On Time" : "Late")
+                                                .foregroundColor(detail.status == 0 ? .green : .red)
+                                        }
                                     }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    
-                                    Group {
-                                        Text(detail.status == 0 ? "On Time" : "Late")
-                                            .foregroundColor(detail.status == 0 ? .green : .red)
-                                    }
-                                    .frame(width: 80, alignment: .trailing)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .foregroundStyle(Color.black)
                                 }
                                 .padding(.horizontal)
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -104,6 +101,9 @@ struct HomeScreenView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         
-        
     }
+}
+
+#Preview {
+    HomeScreenView()
 }

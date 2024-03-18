@@ -16,19 +16,28 @@ struct AdminLoginView: View {
             VStack {
                 Spacer()
                 
-                VStack(spacing: 20) {
+                VStack(spacing: 10) {
                     Image("parkway")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: verticalSizeClass == .regular ? 400 : 150)
+                        .frame(maxWidth: 400, maxHeight: 400)
                     
-                    TextField("Username", text: $viewModel.user.username)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal, verticalSizeClass == .regular ? 100 : 50)
+                    HStack{
+                        Text("Username: ")
+                            .foregroundStyle(Color.customPink)
+                        TextField("Username", text: $viewModel.user.username)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    .padding()
                     
-                    SecureField("Password", text: $viewModel.user.password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal, verticalSizeClass == .regular ? 100 : 50)
+
+                    HStack{
+                        Text("Password: ")
+                            .foregroundStyle(Color.customPink)
+                        SecureField("Password", text: $viewModel.user.password)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    .padding()
+                   
                     
                     if let errorMessage = viewModel.errorMessage {
                         Text(errorMessage)
@@ -39,7 +48,11 @@ struct AdminLoginView: View {
                     Button("Login") {
                         viewModel.login()
                     }
-                    .buttonStyle(PrimaryButtonStyle()) 
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.customPink)
+                    .cornerRadius(8)
                     .disabled(viewModel.isLoggingIn)
                     .padding()
                 }
@@ -52,6 +65,10 @@ struct AdminLoginView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
+}
+
+#Preview {
+    AdminLoginView(viewModel: AdminLoginViewModel())
 }
 
 
