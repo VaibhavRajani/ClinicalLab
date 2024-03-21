@@ -17,6 +17,7 @@ class AdminLoginViewUITests: XCTestCase {
     }
 
     func testSuccessfulLogin() {
+        let logOutButton = app.buttons["LogOutButton"]
         let usernameTextField = app.textFields["Username"]
         XCTAssertTrue(usernameTextField.exists)
         usernameTextField.tap()
@@ -29,6 +30,9 @@ class AdminLoginViewUITests: XCTestCase {
         
         app.buttons["Login"].tap()
         
-         XCTAssert(app.buttons["Log Out"].exists)
-    }
+        let exists = NSPredicate(format: "exists == 1")
+            expectation(for: exists, evaluatedWith: logOutButton, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        XCTAssert(logOutButton.exists)    }
 }

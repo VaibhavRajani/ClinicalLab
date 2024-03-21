@@ -23,6 +23,7 @@ struct HomeScreenView: View {
                         ContentView()
                     }
                     .foregroundColor(.white)
+                    .accessibilityIdentifier("LogOutButton")
                 }
                 .padding()
                 .background(Color.customPink)
