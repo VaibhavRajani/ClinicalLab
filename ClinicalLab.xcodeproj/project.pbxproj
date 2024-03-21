@@ -33,6 +33,11 @@
 		2F3A68862B8489DF004E4992 /* VehicleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68852B8489DF004E4992 /* VehicleListView.swift */; };
 		2F3A68882B848D70004E4992 /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68872B848D70004E4992 /* AddVehicleView.swift */; };
 		2F3A688A2B849090004E4992 /* UpdateVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A68892B849090004E4992 /* UpdateVehicleView.swift */; };
+		2F5835242BABC54D00304322 /* AdminLoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5835232BABC54D00304322 /* AdminLoginViewModelTests.swift */; };
+		2F5835262BABC74900304322 /* DriverDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5835252BABC74900304322 /* DriverDetailViewModelTests.swift */; };
+		2F5835282BABDA4800304322 /* GetRouteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5835272BABDA4800304322 /* GetRouteViewModelTests.swift */; };
+		2F58352A2BABDAE000304322 /* GetCustomerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5835292BABDAE000304322 /* GetCustomerViewModelTests.swift */; };
+		2F58352C2BABDC0F00304322 /* AdminLoginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58352B2BABDC0F00304322 /* AdminLoginViewUITests.swift */; };
 		2F7715A82B81504F00DE6DB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715A72B81504F00DE6DB3 /* SettingsView.swift */; };
 		2F7715AA2B8151D100DE6DB3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715A92B8151D100DE6DB3 /* MainTabView.swift */; };
 		2F7715AC2B81564C00DE6DB3 /* DriverListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */; };
@@ -97,6 +102,11 @@
 		2F3A68852B8489DF004E4992 /* VehicleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListView.swift; sourceTree = "<group>"; };
 		2F3A68872B848D70004E4992 /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
 		2F3A68892B849090004E4992 /* UpdateVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVehicleView.swift; sourceTree = "<group>"; };
+		2F5835232BABC54D00304322 /* AdminLoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewModelTests.swift; sourceTree = "<group>"; };
+		2F5835252BABC74900304322 /* DriverDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewModelTests.swift; sourceTree = "<group>"; };
+		2F5835272BABDA4800304322 /* GetRouteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRouteViewModelTests.swift; sourceTree = "<group>"; };
+		2F5835292BABDAE000304322 /* GetCustomerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerViewModelTests.swift; sourceTree = "<group>"; };
+		2F58352B2BABDC0F00304322 /* AdminLoginViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewUITests.swift; sourceTree = "<group>"; };
 		2F7715A72B81504F00DE6DB3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2F7715A92B8151D100DE6DB3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		2F7715AB2B81564C00DE6DB3 /* DriverListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListView.swift; sourceTree = "<group>"; };
@@ -184,6 +194,7 @@
 		2F2A86A42B796D7E00E36126 /* ClinicalLabTests */ = {
 			isa = PBXGroup;
 			children = (
+				2F58351D2BABAC9A00304322 /* ViewModelTests */,
 				2F2A86A52B796D7E00E36126 /* ClinicalLabTests.swift */,
 			);
 			path = ClinicalLabTests;
@@ -194,6 +205,7 @@
 			children = (
 				2F2A86AF2B796D7E00E36126 /* ClinicalLabUITests.swift */,
 				2F2A86B12B796D7E00E36126 /* ClinicalLabUITestsLaunchTests.swift */,
+				2F58352B2BABDC0F00304322 /* AdminLoginViewUITests.swift */,
 			);
 			path = ClinicalLabUITests;
 			sourceTree = "<group>";
@@ -251,6 +263,17 @@
 				2F7715AD2B81582100DE6DB3 /* GetDriverService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2F58351D2BABAC9A00304322 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F5835232BABC54D00304322 /* AdminLoginViewModelTests.swift */,
+				2F5835252BABC74900304322 /* DriverDetailViewModelTests.swift */,
+				2F5835272BABDA4800304322 /* GetRouteViewModelTests.swift */,
+				2F5835292BABDAE000304322 /* GetCustomerViewModelTests.swift */,
+			);
+			path = ViewModelTests;
 			sourceTree = "<group>";
 		};
 		2FB8B6A62B8813F500BA694C /* DriverView */ = {
@@ -466,7 +489,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5835262BABC74900304322 /* DriverDetailViewModelTests.swift in Sources */,
+				2F5835282BABDA4800304322 /* GetRouteViewModelTests.swift in Sources */,
+				2F5835242BABC54D00304322 /* AdminLoginViewModelTests.swift in Sources */,
 				2F2A86A62B796D7E00E36126 /* ClinicalLabTests.swift in Sources */,
+				2F58352A2BABDAE000304322 /* GetCustomerViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +503,7 @@
 			files = (
 				2F2A86B02B796D7E00E36126 /* ClinicalLabUITests.swift in Sources */,
 				2F2A86B22B796D7E00E36126 /* ClinicalLabUITestsLaunchTests.swift in Sources */,
+				2F58352C2BABDC0F00304322 /* AdminLoginViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
