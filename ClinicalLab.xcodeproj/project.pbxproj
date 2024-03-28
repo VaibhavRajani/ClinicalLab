@@ -49,6 +49,9 @@
 		2F7715B82B82FB5000DE6DB3 /* GetCustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */; };
 		2F7715BA2B83066200DE6DB3 /* GetCustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */; };
 		2F7794A42BB531A300035BA9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7794A32BB531A300035BA9 /* Configuration.swift */; };
+		2F7794A62BB5384700035BA9 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7794A52BB5384700035BA9 /* Customer.swift */; };
+		2F7794A82BB5385300035BA9 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7794A72BB5385300035BA9 /* Driver.swift */; };
+		2F7794AA2BB5385900035BA9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7794A92BB5385900035BA9 /* Vehicle.swift */; };
 		2FB8B69D2B86921300BA694C /* GetRouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B69C2B86921300BA694C /* GetRouteService.swift */; };
 		2FB8B69F2B8696AB00BA694C /* GetRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B69E2B8696AB00BA694C /* GetRouteViewModel.swift */; };
 		2FB8B6A12B86976100BA694C /* RouteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B6A02B86976100BA694C /* RouteListView.swift */; };
@@ -119,6 +122,9 @@
 		2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerService.swift; sourceTree = "<group>"; };
 		2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerViewModel.swift; sourceTree = "<group>"; };
 		2F7794A32BB531A300035BA9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		2F7794A52BB5384700035BA9 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		2F7794A72BB5385300035BA9 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		2F7794A92BB5385900035BA9 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		2FB8B69C2B86921300BA694C /* GetRouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRouteService.swift; sourceTree = "<group>"; };
 		2FB8B69E2B8696AB00BA694C /* GetRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRouteViewModel.swift; sourceTree = "<group>"; };
 		2FB8B6A02B86976100BA694C /* RouteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListView.swift; sourceTree = "<group>"; };
@@ -219,6 +225,9 @@
 				2F2A86BE2B79FF2700E36126 /* User.swift */,
 				2F2A86D22B7A0E7B00E36126 /* AdminDetails.swift */,
 				2F2A86DA2B7B244D00E36126 /* Route.swift */,
+				2F7794A52BB5384700035BA9 /* Customer.swift */,
+				2F7794A72BB5385300035BA9 /* Driver.swift */,
+				2F7794A92BB5385900035BA9 /* Vehicle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,10 +461,12 @@
 				2F3A687E2B8427B0004E4992 /* AddCustomerView.swift in Sources */,
 				2F7715A82B81504F00DE6DB3 /* SettingsView.swift in Sources */,
 				2F2A86D32B7A0E7B00E36126 /* AdminDetails.swift in Sources */,
+				2F7794A82BB5385300035BA9 /* Driver.swift in Sources */,
 				2F2A86C52B79FF6D00E36126 /* AdminLoginView.swift in Sources */,
 				2F7715BA2B83066200DE6DB3 /* GetCustomerViewModel.swift in Sources */,
 				2F7715AA2B8151D100DE6DB3 /* MainTabView.swift in Sources */,
 				2F2A86C12B79FF3C00E36126 /* AdminViewModel.swift in Sources */,
+				2F7794AA2BB5385900035BA9 /* Vehicle.swift in Sources */,
 				2F2A86D12B7A0E5300E36126 /* HomeViewModel.swift in Sources */,
 				2F2A86E12B7B25A600E36126 /* DriverDetailView.swift in Sources */,
 				2F3A68802B84645F004E4992 /* UpdateCustomerView.swift in Sources */,
@@ -480,6 +491,7 @@
 				2F7715AC2B81564C00DE6DB3 /* DriverListView.swift in Sources */,
 				2F3A688A2B849090004E4992 /* UpdateVehicleView.swift in Sources */,
 				2FB8B6A52B86C76F00BA694C /* UpdateRouteView.swift in Sources */,
+				2F7794A62BB5384700035BA9 /* Customer.swift in Sources */,
 				2F3A68842B8489BE004E4992 /* GetVehicleViewModel.swift in Sources */,
 				2F7715B42B82863B00DE6DB3 /* AddDriverView.swift in Sources */,
 				2FB8B69F2B8696AB00BA694C /* GetRouteViewModel.swift in Sources */,
