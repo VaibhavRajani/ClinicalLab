@@ -96,7 +96,7 @@ struct RouteListView: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                     .onTapGesture {
-                        showingUpdatePopup = false
+                        showingAddRouteView = false
                     }
                 AddRouteView(isPresented: $showingAddRouteView, viewModel: viewModel)
                     .background(Color.white)

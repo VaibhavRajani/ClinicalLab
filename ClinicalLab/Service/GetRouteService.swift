@@ -10,12 +10,12 @@ import Combine
 
 class GetRouteService {
     func getRoute(completion: @escaping (Result<[RouteDetailResponse], Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/Route/GetRoute") else {
-            completion(.failure(URLError(.badURL)))
-            return
+        guard let getRouteURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.getRoute)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: getRouteURL)
+        
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) { data, response, error in
@@ -47,12 +47,12 @@ class GetRouteService {
     }
     
     func updateRoute(customerIDs: String, driverId: Int, routeName: String, vehicleNo: String, routeNo: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/Route/EditRoute") else {
-            completion(.failure(URLError(.badURL)))
-            return
+        guard let editRouteURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.editRoute)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: editRouteURL)
+        
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -87,12 +87,12 @@ class GetRouteService {
     }
     
     func addRoute(customerIDs: String, driverId: Int, routeName: String, vehicleNo: String, completion: @escaping (Result<String, Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/Route/AddRoute") else {
-            completion(.failure(URLError(.badURL)))
-            return
+        guard let addRouteURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.addRoute)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: addRouteURL)
+        
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -139,12 +139,13 @@ class GetRouteService {
     }
     
     func deleteRoute(routeNo: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/Route/DeleteRoute/?RouteNumber=\(routeNo)") else {
-            completion(.failure(URLError(.badURL)))
-            return
+        
+        guard let deleteRoute = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.deleteRoute)/?RouteNumber=\(routeNo)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: deleteRoute)
+        
         request.httpMethod = "POST"
         
         URLSession.shared.dataTask(with: request) { data, response, error in

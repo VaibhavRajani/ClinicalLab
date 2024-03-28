@@ -15,7 +15,7 @@ struct AddVehicleView: View {
     @State private var manufacturer: String = ""
     @State private var model: String = ""
     @State private var vehicleId: Int = 0
-    
+
     let buttonBackgroundColor = Color.customPink
     let buttonTextColor = Color.white
     
@@ -28,6 +28,14 @@ struct AddVehicleView: View {
             TextField("Plate Number", text: $plateNumber)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.center)
+            
+//            Picker("Select Vehicle", selection: $selectedVehicleId) {
+//                            ForEach(viewModel.vehicles) { vehicle in
+//                                Text(vehicle.plateNumber ?? "Unknown").tag(vehicle.vehicleId as Int?)
+//                            }
+//                        }
+//                        .pickerStyle(MenuPickerStyle())
+            
             
             TextField("Vehicle Make", text: $manufacturer)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -51,6 +59,9 @@ struct AddVehicleView: View {
                 isPresented = false
             }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
         }
+        .onAppear {
+                    viewModel.fetchVehicles() // Ensure the vehicle list is up to date
+                }
         .padding()
         .frame(width: 450, height: 400)
         .background(Color.white)

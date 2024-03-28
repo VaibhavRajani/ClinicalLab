@@ -16,7 +16,9 @@ enum LoginError: Error {
 
 class LoginService {
     func login(user: User) -> AnyPublisher<Bool, LoginError> {
-        let loginURL = URL(string: "https://gapinternationalwebapi20200521010239.azurewebsites.net/api/User/UserLogin")!
+        guard let loginURL = URL(string: "\(Configuration.loginURL)\(Configuration.Endpoint.login)") else {
+            fatalError("Invalid URL")
+        }
         var request = URLRequest(url: loginURL)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

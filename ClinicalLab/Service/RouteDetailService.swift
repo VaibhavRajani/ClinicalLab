@@ -10,9 +10,13 @@ import Foundation
 
 class RouteDetailService {
     func getRouteDetail(routeNumber: Int, completion: @escaping (Result<[RouteDetailResponse], Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/Route/GetRouteDetail/?RouteNumber=\(routeNumber)") else { return }
         
-        var request = URLRequest(url: url)
+        guard let routeDetailURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.getRouteDetail)/?RouteNumber=\(routeNumber)") else {
+            fatalError("Invalid URL")
+        }
+        
+        var request = URLRequest(url: routeDetailURL)
+        
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -47,13 +51,13 @@ class RouteDetailService {
     }
     
     func getDriverLocation(driverId: Int, completion: @escaping (Result<DriverLocation, Error>) -> Void) {
-        let urlString = "https://pclwebapi.azurewebsites.net/api/Driver/GetDriverLocation?DriverId=\(driverId)"
-        guard let url = URL(string: urlString) else {
-            completion(.failure(URLError(.badURL)))
-            return
+        
+        guard let routeDetailURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.getDriverLocation)?DriverId=\(driverId)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: routeDetailURL)
+        
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) { data, response, error in

@@ -9,12 +9,11 @@ import Foundation
 
 class GetVehicleService {
     func getVehicles(completion: @escaping (Result<[Vehicle], Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/vehicle/GetVehicle") else {
-            completion(.failure(URLError(.badURL)))
-            return
+        guard let getVehicleURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.getVehicle)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: getVehicleURL)
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) { data, response, error in
@@ -46,12 +45,11 @@ class GetVehicleService {
     }
     
     func updateVehicle(manufacturer: String, model: String, plateNumber: String, vehicleId: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/vehicle/UpdateVehicle") else {
-            completion(.failure(URLError(.badURL)))
-            return
+        guard let updateVehicleURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.updateVehicle)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: updateVehicleURL)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -97,8 +95,11 @@ class GetVehicleService {
     }
     
     func addVehicle(manufacturer: String, model: String, plateNumber: String, vehicleId: Int,  completion: @escaping (Result<Bool, Error>) -> Void) {
-        let url = URL(string: "https://pclwebapi.azurewebsites.net/api/vehicle/AddVehicle")!
-        var request = URLRequest(url: url)
+        guard let addVehicleURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.addVehicle)") else {
+            fatalError("Invalid URL")
+        }
+        
+        var request = URLRequest(url: addVehicleURL)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -133,12 +134,13 @@ class GetVehicleService {
     }
     
     func deleteVehicle(vehicleId: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-        guard let url = URL(string: "https://pclwebapi.azurewebsites.net/api/vehicle/DeleteVehicle?VehicleId=\(vehicleId)") else {
-            completion(.failure(URLError(.badURL)))
-            return
+        
+        guard let deleteVehicleURL = URL(string: "\(Configuration.baseURL)\(Configuration.Endpoint.deleteVehicle)?VehicleId=\(vehicleId)") else {
+            fatalError("Invalid URL")
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: deleteVehicleURL)
+        
         request.httpMethod = "POST"
         
         URLSession.shared.dataTask(with: request) { data, response, error in

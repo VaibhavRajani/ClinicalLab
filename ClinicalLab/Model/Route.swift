@@ -65,7 +65,8 @@ struct Customer: Codable, Identifiable {
 }
 
 
-struct Cust: Codable {
+struct Cust: Codable, Identifiable, Hashable {
+    var id: Int { customerId ?? 0 }
     let customerId: Int?
     let customerName: String?
     let streetAddress: String?
@@ -107,7 +108,8 @@ struct DriverLocation: Codable {
     }
 }
 
-struct Driver: Codable {
+struct Driver: Codable, Identifiable {
+    var id: Int { driverId ?? 0 }
     let driverId: Int
     let driverName: String
     let firstName: String?
@@ -127,7 +129,8 @@ struct DeleteDriverResponse: Codable {
     let result: String
 }
 
-struct Vehicle: Codable {
+struct Vehicle: Codable, Identifiable {
+    var id: Int { vehicleId ?? 0 }
     let vehicleId: Int?
     let plateNumber: String?
     let manufacturer: String?

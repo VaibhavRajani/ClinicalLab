@@ -28,19 +28,21 @@ struct UpdateRouteView: View {
                 .foregroundColor(.customPink)
             
             HStack (spacing: 7){
-                Text("\(routeDetail.route.routeNo ?? 0)")                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text("\(routeDetail.route.routeNo ?? 0)")                    
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .multilineTextAlignment(.center)
                     .multilineTextAlignment(.center)
-                TextField("Route Name", text: $newRouteName)
+                TextField("Route Name: " + "\(routeDetail.route.routeName ?? "N/A")", text: $newRouteName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .multilineTextAlignment(.center)
             }
             
             HStack (spacing: 7){
-                TextField("Driver Id", text: $newDriverId)
+                TextField("Driver Id: " + "\(routeDetail.route.driverId ?? 0)", text: $newDriverId)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .multilineTextAlignment(.center)
-                TextField("Vehicle Number", text: $newVehicleNo)
+                
+                TextField("Vehicle Number: " + "\(routeDetail.route.vehicleNo ?? "N/A")", text: $newVehicleNo)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .multilineTextAlignment(.center)
             }

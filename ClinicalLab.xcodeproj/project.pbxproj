@@ -48,6 +48,7 @@
 		2F7715B62B82FAEA00DE6DB3 /* CustomerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */; };
 		2F7715B82B82FB5000DE6DB3 /* GetCustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */; };
 		2F7715BA2B83066200DE6DB3 /* GetCustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */; };
+		2F7794A42BB531A300035BA9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7794A32BB531A300035BA9 /* Configuration.swift */; };
 		2FB8B69D2B86921300BA694C /* GetRouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B69C2B86921300BA694C /* GetRouteService.swift */; };
 		2FB8B69F2B8696AB00BA694C /* GetRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B69E2B8696AB00BA694C /* GetRouteViewModel.swift */; };
 		2FB8B6A12B86976100BA694C /* RouteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8B6A02B86976100BA694C /* RouteListView.swift */; };
@@ -117,6 +118,7 @@
 		2F7715B52B82FAEA00DE6DB3 /* CustomerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListView.swift; sourceTree = "<group>"; };
 		2F7715B72B82FB5000DE6DB3 /* GetCustomerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerService.swift; sourceTree = "<group>"; };
 		2F7715B92B83066200DE6DB3 /* GetCustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerViewModel.swift; sourceTree = "<group>"; };
+		2F7794A32BB531A300035BA9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		2FB8B69C2B86921300BA694C /* GetRouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRouteService.swift; sourceTree = "<group>"; };
 		2FB8B69E2B8696AB00BA694C /* GetRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRouteViewModel.swift; sourceTree = "<group>"; };
 		2FB8B6A02B86976100BA694C /* RouteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		2F2A86932B796D7C00E36126 /* ClinicalLab */ = {
 			isa = PBXGroup;
 			children = (
+				2F7794A32BB531A300035BA9 /* Configuration.swift */,
 				2F2A86CB2B7A0A3E00E36126 /* Service */,
 				2F2A86CA2B7A0A3500E36126 /* ViewModel */,
 				2F2A86C92B7A0A3000E36126 /* View */,
@@ -466,6 +469,7 @@
 				2F3A68822B848906004E4992 /* GetVehicleService.swift in Sources */,
 				2F3A68882B848D70004E4992 /* AddVehicleView.swift in Sources */,
 				2F2A86952B796D7C00E36126 /* ClinicalLabApp.swift in Sources */,
+				2F7794A42BB531A300035BA9 /* Configuration.swift in Sources */,
 				2F3A68862B8489DF004E4992 /* VehicleListView.swift in Sources */,
 				2F2A86CF2B7A0E3A00E36126 /* HomeScreenView.swift in Sources */,
 				2F2A86DB2B7B244D00E36126 /* Route.swift in Sources */,

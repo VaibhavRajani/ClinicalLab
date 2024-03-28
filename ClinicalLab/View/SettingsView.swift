@@ -9,31 +9,35 @@ import Foundation
 import SwiftUI
 
 struct SettingsView: View {
+    // Define an array of Navigation Items
+    private let navigationItems: [NavigationItem] = [
+        NavigationItem(title: "Driver", destination: AnyView(DriverListView())),
+        NavigationItem(title: "Customer", destination: AnyView(CustomerListView())),
+        NavigationItem(title: "Vehicle", destination: AnyView(VehicleListView())),
+        NavigationItem(title: "Routes", destination: AnyView(RouteListView()))
+    ]
+
     var body: some View {
-        NavigationView{
+        NavigationView {
             List {
-                NavigationLink("Driver", destination: DriverListView())
-                NavigationLink("Customer", destination: CustomerListView())
-                NavigationLink("Vehicle", destination: VehicleListView())
-                NavigationLink("Routes", destination: RouteListView())
+                // Use ForEach even though it's static content
+                ForEach(navigationItems, id: \.title) { item in
+                    NavigationLink(item.title, destination: item.destination)
+                }
             }
             .navigationTitle("Settings")
-            .listStyle(GroupedListStyle())
+          //  .listStyle(GroupedListStyle())
             .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbarBackground(
-                Color.customPink,
-                for: .navigationBar)
+            .toolbarBackground(Color.customPink, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
-
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+    //    .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
-// Preview provider for SwiftUI Canvas
-//struct SettingsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SettingsView()
-//    }
-//}
+// Define a struct to hold the title and destination of each navigation item
+struct NavigationItem {
+    let title: String
+    let destination: AnyView
+}
