@@ -9,11 +9,12 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var loginViewModel = AdminLoginViewModel()
+    @StateObject var loginViewModel = AdminLoginViewModel(loginService: LoginService())
     
     var body: some View {
         if loginViewModel.isAuthenticated {
             MainTabView()
+                .environmentObject(loginViewModel)
         } else {
             AdminLoginView(viewModel: loginViewModel)
         }

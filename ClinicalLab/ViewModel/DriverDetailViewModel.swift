@@ -45,4 +45,5 @@ class DriverDetailViewModel: ObservableObject {
             
         }
     }
+
 }

@@ -14,28 +14,36 @@ class AdminLoginViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var isAuthenticated = false
     
+    private var loginService: LoginService
+    var onLoginSuccess: (() -> Void)?
+    
+    init(loginService: LoginService) {
+        self.loginService = loginService
+    }
+    
     private var cancellables = Set<AnyCancellable>()
     
     func login() {
         isLoggingIn = true
         errorMessage = nil
         
-        LoginService().login(user: user)
+        loginService.login(user: user)
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                self.isLoggingIn = false
+            .sink(receiveCompletion: { [weak self] completion in
+                self?.isLoggingIn = false
                 if case let .failure(error) = completion {
-                    self.errorMessage = error.localizedDescription
+                    self?.errorMessage = error.localizedDescription
                 }
-            }, receiveValue: { isSuccess in
+            }, receiveValue: { [weak self] isSuccess in
                 if isSuccess {
-                    self.isAuthenticated = true
+                    self?.isAuthenticated = true
+                    self?.onLoginSuccess?()
                     print("Login successful")
                 } else {
-                    self.errorMessage = "Login failed"
+                    self?.errorMessage = "Login failed"
                     print("Login not successful")
                 }
             })
-            .store(in: &cancellables)
+            .store(in: &self.cancellables)
     }
 }

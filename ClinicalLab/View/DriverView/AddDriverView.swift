@@ -80,7 +80,6 @@ struct AddDriverButtonStyle: ButtonStyle {
     }
 }
 
-// Preview for SwiftUI Canvas
 struct AddDriverView_Previews: PreviewProvider {
     static var previews: some View {
         AddDriverView(isPresented: .constant(true), viewModel: GetDriverViewModel())

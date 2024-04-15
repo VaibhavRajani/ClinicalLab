@@ -20,7 +20,7 @@ struct DriverLocation: Codable {
 }
 
 struct Driver: Codable, Identifiable {
-    var id: Int { driverId ?? 0 }
+    var id: Int { driverId }
     let driverId: Int
     let driverName: String
     let firstName: String?

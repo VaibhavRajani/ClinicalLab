@@ -76,7 +76,7 @@ class GetCustomerService {
                 return
             }
             
-            guard let data = data else {
+            guard data != nil else {
                 DispatchQueue.main.async {
                     completion(.failure(URLError(.badServerResponse)))
                 }

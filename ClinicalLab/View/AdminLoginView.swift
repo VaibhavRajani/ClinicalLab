@@ -61,14 +61,11 @@ struct AdminLoginView: View {
             }
             .navigationTitle("Admin Login")
             .navigationBarHidden(true)
-            .edgesIgnoringSafeArea(.all) // Extend to the edges if needed.
+            .edgesIgnoringSafeArea(.all) 
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
-#Preview {
-    AdminLoginView(viewModel: AdminLoginViewModel())
-}
 
 

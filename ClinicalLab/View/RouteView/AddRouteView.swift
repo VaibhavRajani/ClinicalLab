@@ -39,11 +39,13 @@ struct AddRouteView: View {
                 appendCurrentInput()
             })
             .textFieldStyle(RoundedBorderTextFieldStyle())
-            .onChange(of: customerInput) { newValue in
-                if newValue.last == "," {
+            
+            .onChange(of: customerInput) {
+                if customerInput.last == "," {
                     appendCurrentInput()
                 }
             }
+
             
             if !customerInput.isEmpty && customerInput.last != "," {
                 ScrollView {

@@ -22,7 +22,7 @@ class AdminLoginViewUITests: XCTestCase {
         XCTAssertTrue(usernameTextField.exists)
         usernameTextField.tap()
         usernameTextField.typeText("admin")
-
+        
         let passwordSecureTextField = app.secureTextFields["Password"]
         XCTAssertTrue(passwordSecureTextField.exists)
         passwordSecureTextField.tap()
@@ -31,8 +31,9 @@ class AdminLoginViewUITests: XCTestCase {
         app.buttons["Login"].tap()
         
         let exists = NSPredicate(format: "exists == 1")
-            expectation(for: exists, evaluatedWith: logOutButton, handler: nil)
+        expectation(for: exists, evaluatedWith: logOutButton, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
         
-        XCTAssert(logOutButton.exists)    }
+        XCTAssert(logOutButton.exists)
+    }
 }

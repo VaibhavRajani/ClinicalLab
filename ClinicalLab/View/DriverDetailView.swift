@@ -11,7 +11,7 @@ import MapKit
 struct DriverDetailView: View {
     @StateObject var viewModel = DriverDetailViewModel()
     let routeNo: Int
-    @Environment(\.presentationMode) var presentationMode  // Access the presentation mode
+    @Environment(\.presentationMode) var presentationMode
     
     @State private var driverLocation = CLLocationCoordinate2D(latitude: 39.9526, longitude: -75.1652)
     

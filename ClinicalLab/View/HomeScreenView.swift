@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeScreenView: View {
     @StateObject var viewModel = HomeViewModel()
-    
+    @EnvironmentObject var loginViewModel: AdminLoginViewModel
     var body: some View {
         NavigationView {
             VStack {
@@ -20,7 +20,7 @@ struct HomeScreenView: View {
                         .font(.title)
                     Spacer()
                     Button("Log Out") {
-                        ContentView()
+                        loginViewModel.isAuthenticated = false
                     }
                     .foregroundColor(.white)
                     .accessibilityIdentifier("LogOutButton")

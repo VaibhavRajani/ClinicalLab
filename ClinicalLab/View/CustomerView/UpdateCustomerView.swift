@@ -126,13 +126,11 @@ struct UpdateCustomerView: View {
         zip = customer.zip!
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h:mm a" // Use the date format that matches your string
+        dateFormatter.dateFormat = "h:mm a"
         
         if let date = dateFormatter.date(from: customer.pickUpTime!) {
             pickupTime = date
         } else {
-            // Handle the error of failing to parse the date,
-            // perhaps setting it to the current time or another default value
             pickupTime = Date()
         }
     }

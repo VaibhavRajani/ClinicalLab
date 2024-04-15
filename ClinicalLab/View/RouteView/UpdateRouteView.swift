@@ -57,7 +57,6 @@ struct UpdateRouteView: View {
                         Button(role: .destructive) {
                             
                             if let driverIdInt = Int(newDriverId) {
-                                // Combine the existing customer IDs with additional ones
                                 let updatedCustomerIds = viewModel.removeCustomer(from: routeDetail, customerId: customer.customerId ?? 0)
                                 
                                 viewModel.updateRoute(routeDetail: routeDetail, newRouteName: newRouteName, newVehicleNo: newVehicleNo, newDriverId: driverIdInt, newCustomerIDs: updatedCustomerIds) { success in
@@ -83,7 +82,7 @@ struct UpdateRouteView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: {
                     additionalCustomerIDs.append(newCustomerIDs)
-                    newCustomerIDs = "" // Clear the field after adding
+                    newCustomerIDs = "" 
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -91,7 +90,6 @@ struct UpdateRouteView: View {
                 }
             }
             
-            // Show new customer IDs to be added
             ForEach(additionalCustomerIDs, id: \.self) { id in
                 Text("New ID: \(id)")
             }
@@ -103,7 +101,6 @@ struct UpdateRouteView: View {
                 
                 Button("Update") {
                     if let driverIdInt = Int(newDriverId) {
-                        // Combine the existing customer IDs with additional ones
                         let combinedCustomerIDs = (routeDetail.customer.map { "\($0.customerId ?? 0)" } + additionalCustomerIDs).joined(separator: ",")
                         
                         viewModel.updateRoute(routeDetail: routeDetail, newRouteName: newRouteName, newVehicleNo: newVehicleNo, newDriverId: driverIdInt, newCustomerIDs: combinedCustomerIDs) { success in

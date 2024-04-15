@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct SettingsView: View {
-    // Define an array of Navigation Items
     private let navigationItems: [NavigationItem] = [
         NavigationItem(title: "Driver", destination: AnyView(DriverListView())),
         NavigationItem(title: "Customer", destination: AnyView(CustomerListView())),
@@ -20,7 +19,6 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                // Use ForEach even though it's static content
                 ForEach(navigationItems, id: \.title) { item in
                     NavigationLink(item.title, destination: item.destination)
                 }
@@ -32,11 +30,10 @@ struct SettingsView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
         }
-    //    .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
-// Define a struct to hold the title and destination of each navigation item
 struct NavigationItem {
     let title: String
     let destination: AnyView

@@ -74,7 +74,6 @@ struct DriverListView: View {
                         showingUpdatePopup = false
                     }
                 
-                // Your modal content
                 if let driver = selectedDriver {
                     UpdateDriverView(driver: driver, isPresented: $showingUpdatePopup, viewModel: viewModel)
                         .background(Color.white)

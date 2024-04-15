@@ -13,7 +13,6 @@ struct UpdateDriverView: View {
     @ObservedObject var viewModel: GetDriverViewModel
     var driver: Driver
     
-    // Initialize the text fields with the current driver data
     @State private var firstName: String
     @State private var lastName: String
     @State private var phoneNumber: String
@@ -23,7 +22,6 @@ struct UpdateDriverView: View {
         self._isPresented = isPresented
         self.viewModel = viewModel
         
-        // Split the driverName into first and last names
         let names = driver.driverName.split(separator: " ").map(String.init)
         _firstName = State(initialValue: names.first ?? "")
         _lastName = State(initialValue: names.count > 1 ? names.last ?? "" : "")

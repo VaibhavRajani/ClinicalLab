@@ -60,7 +60,7 @@ struct AddVehicleView: View {
             }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
         }
         .onAppear {
-                    viewModel.fetchVehicles() // Ensure the vehicle list is up to date
+                    viewModel.fetchVehicles() 
                 }
         .padding()
         .frame(width: 450, height: 400)

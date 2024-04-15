@@ -87,7 +87,6 @@ struct CustomerListView: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                     .onTapGesture {
-                        // Dismiss the modal when the background is tapped
                         showingUpdatePopup = false
                     }
                 AddCustomerView(isPresented: $showingAddCustomerView, viewModel: viewModel)

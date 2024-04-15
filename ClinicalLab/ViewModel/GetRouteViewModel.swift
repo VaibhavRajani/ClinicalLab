@@ -40,9 +40,9 @@ class GetRouteViewModel: ObservableObject {
     }
     
     func removeCustomer(from routeDetail: RouteDetailResponse, customerId: Int) -> String {
-        guard let routeId = routeDetail.route.routeNo else { return "0" }
+        guard routeDetail.route.routeNo != nil else { return "0" }
 
-        var updatedCustomers = routeDetail.customer.filter { $0.customerId != customerId }
+        let updatedCustomers = routeDetail.customer.filter { $0.customerId != customerId }
         
         let updatedCustomerIDs = updatedCustomers.map { "\($0.customerId ?? 0)" }.joined(separator: ",")
         
