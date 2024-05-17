@@ -18,8 +18,14 @@ class AdminLoginViewModel: ObservableObject {
     var onLoginSuccess: (() -> Void)?
     
     init(loginService: LoginService) {
-        self.loginService = loginService
-    }
+         self.loginService = loginService
+         if let savedUsername = UserDefaults.standard.string(forKey: "savedUsername") {
+             user.username = savedUsername
+             if let savedPassword = KeychainHelper.shared.getPassword(for: savedUsername) {
+                 user.password = savedPassword
+             }
+         }
+     }
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -38,6 +44,11 @@ class AdminLoginViewModel: ObservableObject {
                 if isSuccess {
                     self?.isAuthenticated = true
                     self?.onLoginSuccess?()
+                    UserDefaults.standard.set(self?.user.username, forKey: "savedUsername")
+                    KeychainHelper.shared.savePassword(self?.user.password ?? "", for: self?.user.username ?? "")
+                    if let fetchedPassword = KeychainHelper.shared.getPassword(for: self?.user.username ?? "") {
+                                        print("Fetched decrypted password: \(fetchedPassword)")
+                                    }
                     print("Login successful")
                 } else {
                     self?.errorMessage = "Login failed"

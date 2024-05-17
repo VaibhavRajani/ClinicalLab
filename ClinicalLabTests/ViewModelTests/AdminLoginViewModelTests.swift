@@ -14,7 +14,7 @@ class AdminLoginViewModelTests: XCTestCase {
     var viewModel: AdminLoginViewModel!
     
     override func setUpWithError() throws {
-        viewModel = AdminLoginViewModel()
+        viewModel = AdminLoginViewModel(loginService: LoginService)
     }
 
     override func tearDownWithError() throws {

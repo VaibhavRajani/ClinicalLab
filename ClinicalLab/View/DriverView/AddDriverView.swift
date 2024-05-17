@@ -20,33 +20,33 @@ struct AddDriverView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Add Driver")
+            Text(Strings.addDriverTitle)
                 .font(.headline)
                 .foregroundColor(.customPink)
             
-            TextField("First Name", text: $firstName)
+            TextField(Strings.firstNamePlaceholder, text: $firstName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.center)
             
-            TextField("Last Name", text: $lastName)
+            TextField(Strings.lastNamePlaceholder, text: $lastName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.center)
             
-            TextField("Phone Number", text: $phoneNumber)
+            TextField(Strings.lastNamePlaceholder, text: $phoneNumber)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.phonePad)
                 .multilineTextAlignment(.center)
             
             HStack(spacing: 10) {
-                Button("Reset") {
+                Button(Strings.reset) {
                     resetFields()
                 }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
                 
-                Button("Cancel") {
+                Button(Strings.cancel) {
                     isPresented = false
                 }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
             }
-            Button("Add Driver") {
+            Button(Strings.addDriverTitle) {
                 viewModel.addDriver(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber)
                 isPresented = false
             }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))

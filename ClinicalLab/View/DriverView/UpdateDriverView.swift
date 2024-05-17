@@ -33,22 +33,22 @@ struct UpdateDriverView: View {
         ZStack{
   
             VStack {
-                Text("Update Driver")
+                Text(Strings.updateDriverTitle)
                     .font(.headline)
                     .padding(.bottom, 20)
                     .foregroundColor(.customPink)
                 
-                TextField("First Name", text: $firstName)
+                TextField(Strings.firstNamePlaceholder, text: $firstName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.bottom, 10)
                     .multilineTextAlignment(.center)
                 
-                TextField("Last Name", text: $lastName)
+                TextField(Strings.lastNamePlaceholder, text: $lastName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.bottom, 10)
                     .multilineTextAlignment(.center)
 
-                TextField("Phone Number", text: $phoneNumber)
+                TextField(Strings.phoneNumberPlaceholder, text: $phoneNumber)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.phonePad)
                     .multilineTextAlignment(.center)
@@ -57,7 +57,7 @@ struct UpdateDriverView: View {
                     Button(action: {
                         resetFields()
                     }) {
-                        Text("Reset")
+                        Text(Strings.reset)
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
                             .background(buttonBackgroundColor)
@@ -66,7 +66,7 @@ struct UpdateDriverView: View {
                     Button(action: {
                         self.isPresented = false
                     }) {
-                        Text("Cancel")
+                        Text(Strings.cancel)
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
                             .background(buttonBackgroundColor)
@@ -78,7 +78,7 @@ struct UpdateDriverView: View {
                     viewModel.updateDriver(driver: Driver(driverId: driver.driverId, driverName: "\(firstName) \(lastName)", firstName: firstName, lastName: lastName, phoneNumber: phoneNumber))
                     self.isPresented = false
                 }) {
-                    Text("Update")
+                    Text(Strings.update)
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding()
                         .background(buttonBackgroundColor)

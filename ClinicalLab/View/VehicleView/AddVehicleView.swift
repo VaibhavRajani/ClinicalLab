@@ -15,53 +15,53 @@ struct AddVehicleView: View {
     @State private var manufacturer: String = ""
     @State private var model: String = ""
     @State private var vehicleId: Int = 0
-
+    
     let buttonBackgroundColor = Color.customPink
     let buttonTextColor = Color.white
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Add Vehicle")
+            Text(Strings.addVehicleTitle)
                 .font(.title)
                 .foregroundColor(.customPink)
             
-            TextField("Plate Number", text: $plateNumber)
+            TextField(Strings.plateNumberPlaceholder, text: $plateNumber)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.center)
             
-//            Picker("Select Vehicle", selection: $selectedVehicleId) {
-//                            ForEach(viewModel.vehicles) { vehicle in
-//                                Text(vehicle.plateNumber ?? "Unknown").tag(vehicle.vehicleId as Int?)
-//                            }
-//                        }
-//                        .pickerStyle(MenuPickerStyle())
+            //            Picker("Select Vehicle", selection: $selectedVehicleId) {
+            //                            ForEach(viewModel.vehicles) { vehicle in
+            //                                Text(vehicle.plateNumber ?? "Unknown").tag(vehicle.vehicleId as Int?)
+            //                            }
+            //                        }
+            //                        .pickerStyle(MenuPickerStyle())
             
             
-            TextField("Vehicle Make", text: $manufacturer)
+            TextField(Strings.vehicleMakePlaceholder, text: $manufacturer)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.center)
             
-            TextField("Vehicle Model", text: $model)
+            TextField(Strings.vehicleModelPlaceholder, text: $model)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.center)
             
             HStack(spacing: 10) {
-                Button("Reset") {
+                Button(Strings.resetButtonTitle) {
                     resetFields()
                 }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
                 
-                Button("Cancel") {
+                Button(Strings.cancelButtonTitle) {
                     isPresented = false
                 }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
             }
-            Button("Add") {
+            Button(Strings.addButtonTitle) {
                 viewModel.addVehicle(manufacturer: manufacturer, model: model, plateNumber: plateNumber, vehicleId: vehicleId)
                 isPresented = false
             }.buttonStyle(AddDriverButtonStyle(backgroundColor: buttonBackgroundColor, textColor: buttonTextColor))
         }
         .onAppear {
-                    viewModel.fetchVehicles() 
-                }
+            viewModel.fetchVehicles()
+        }
         .padding()
         .frame(width: 450, height: 400)
         .background(Color.white)

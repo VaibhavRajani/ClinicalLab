@@ -10,6 +10,7 @@ import SwiftUI
 struct AdminLoginView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @ObservedObject var viewModel: AdminLoginViewModel
+    @State private var savePassword = false
 
     var body: some View {
         NavigationView {
@@ -38,6 +39,8 @@ struct AdminLoginView: View {
                     }
                     .padding()
                    
+                    Toggle("Save Password", isOn: $savePassword)
+                        .padding()
                     
                     if let errorMessage = viewModel.errorMessage {
                         Text(errorMessage)

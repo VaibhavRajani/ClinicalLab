@@ -34,22 +34,22 @@ struct UpdateVehicleView: View {
         ZStack{
   
             VStack {
-                Text("Update Vehicle")
+                Text(Strings.updateVehicleTitle)
                     .font(.headline)
                     .padding(.bottom, 20)
                     .foregroundColor(.customPink)
                 
-                TextField("Plate Number", text: $plateNumber)
+                TextField(Strings.plateNumberPlaceholder, text: $plateNumber)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.bottom, 10)
                     .multilineTextAlignment(.center)
                 
-                TextField("Vehicle Make", text: $manufacturer)
+                TextField(Strings.vehicleMakePlaceholder, text: $manufacturer)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.bottom, 10)
                     .multilineTextAlignment(.center)
 
-                TextField("Vehicle Model", text: $model)
+                TextField(Strings.vehicleModelPlaceholder, text: $model)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.phonePad)
                     .multilineTextAlignment(.center)
@@ -58,7 +58,7 @@ struct UpdateVehicleView: View {
                     Button(action: {
                         resetFields()
                     }) {
-                        Text("Reset")
+                        Text(Strings.resetButtonTitle)
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
                             .background(buttonBackgroundColor)
@@ -67,7 +67,7 @@ struct UpdateVehicleView: View {
                     Button(action: {
                         self.isPresented = false
                     }) {
-                        Text("Cancel")
+                        Text(Strings.cancelButtonTitle)
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
                             .background(buttonBackgroundColor)
@@ -79,7 +79,7 @@ struct UpdateVehicleView: View {
                     viewModel.updateVehicle(vehicle: Vehicle(vehicleId: vehicle.vehicleId, plateNumber: plateNumber, manufacturer: manufacturer, model: model))
                     self.isPresented = false
                 }) {
-                    Text("Update")
+                    Text(Strings.update)
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding()
                         .background(buttonBackgroundColor)

@@ -27,7 +27,7 @@ struct VehicleListView: View {
                                 Button(role: .destructive) {
                                     viewModel.deleteVehicle(vehicleId: vehicle.vehicleId ?? 0)
                                 } label: {
-                                    Label("Delete", systemImage: "trash.fill")
+                                    Label(Strings.delete, systemImage: "trash.fill")
                                 }
                             }
                         }
